@@ -29,6 +29,7 @@
     * cv_bridge
     * cv_camera
     * sensors_msg
+    * gs_camera
 
 ## Описание нод:
 
@@ -36,7 +37,7 @@
 Нода распознавания AprilTag
 
 #### Параметры:
-* image - топик потока с камеры (тип топика: sensor_msgs/Image)
+* image_topic - топик потока с камеры (тип топика: sensor_msgs/Image)
 
 #### Публикации:
 * geoscan/vision/apriltag (gs_vision/Apriltag_array)
@@ -45,7 +46,7 @@
 Нода распознавания ArUco маркеров
 
 #### Параметры:
-* image - топик потока с камеры (тип топика: sensor_msgs/Image)
+* image_topic - топик потока с камеры (тип топика: sensor_msgs/Image)
 
 #### Публикации:
 * geoscan/vision/aruco (gs_vision/ArUco_array)
@@ -54,16 +55,7 @@
 Нода распознавания QR кодов
 
 #### Параметры:
-* image - топик потока с камеры (тип топика: sensor_msgs/Image)
+* image_topic - топик потока с камеры (тип топика: sensor_msgs/Image)
 
 #### Публикации:
 * geoscan/vision/qr (gs_vision/QR_array)
-
-### 4. picamera_node
-Нода предаставляющая поток с Pi Camera
-
-#### Параметры:
-* resolution - разрешение камеры (пример "x, y") 
-
-#### Публикации:
-* geoscan/vision/picamera_capture (sensor_msgs/Image)
